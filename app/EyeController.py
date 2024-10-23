@@ -2,7 +2,7 @@ import time
 import asyncio
 import random
 from multiprocessing import Manager, Process
-from ControllerH import ServoController
+from Controller import ServoController
 
 # Operation description:
 # Servos:

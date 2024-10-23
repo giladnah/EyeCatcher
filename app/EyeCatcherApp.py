@@ -158,7 +158,7 @@ class GStreamerPoseEstimationApp(GStreamerApp):
         elif self.source_type == "usb":
             source_element = f"v4l2src device={self.video_source} name=src_0 ! "
             source_element += f"video/x-raw, width=640, height=480, framerate=30/1 ! "
-            source_element += 'videoflip method=vertical-flip ! '
+            source_element += 'videoflip video-direction=horiz ! '
         else:
             source_element = f"filesrc location=\"{self.video_source}\" name=src_0 ! "
             source_element += QUEUE("queue_dec264")
